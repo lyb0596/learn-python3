@@ -22,15 +22,15 @@ class Car():
 
 
 
-my_new_car = Car('BMW','X5',2017)
-print(my_new_car.get_descriptive_name())
-my_new_car.read_odometer()
-
-# 9.2.3　修改属性的值
-# 可以以三种不同的方式修改属性的值：直接通过实例进行修改；通过方法进行设置；通过方法进行递增（增加特定的值）。
-    # 1. 直接修改属性的值
-my_new_car.odometer_reading = 3
-my_new_car.read_odometer()
-    # 2. 通过方法修改属性的值
-my_new_car.update_odometer(33)
-my_new_car.read_odometer()
+# my_new_car = Car('BMW','X5',2017)
+# print(my_new_car.get_descriptive_name())
+# my_new_car.read_odometer()
+#
+# # 9.2.3　修改属性的值
+# # 可以以三种不同的方式修改属性的值：直接通过实例进行修改；通过方法进行设置；通过方法进行递增（增加特定的值）。
+#     # 1. 直接修改属性的值
+# my_new_car.odometer_reading = 3
+# my_new_car.read_odometer()
+#     # 2. 通过方法修改属性的值
+# my_new_car.update_odometer(33)
+# my_new_car.read_odometer()

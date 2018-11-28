@@ -25,16 +25,25 @@ class Car():
         self.odometer_reading += miles
 
 
+# 9.3.5　将实例用作属性
+class Battery():
+    def __init__(self,battery_size = 70):
+        self.battery_size = battery_size
+    def descri_battery(self):
+        print("battery size is " + str(self.battery_size))
+
+
 # 定义子类时，必须在括号内指定父类的名称
 class ElectricCar(Car):
     """电动汽车的独特之处"""
     def __init__(self, make, model, year):
         """初始化父类的属性"""
         super().__init__(make, model, year)
-        self.battery_size = 70
+        self.battery = Battery(99)
+
 
     def describe_battery(self):
-        print('This car has battery size ' + str(self.battery_size) )
+        self.battery.descri_battery()
 
 #   9.3.4　重写父类的方法  :子类中定义一个这样的方法，即它与要重写的父类方法同名。这样，Python将不会考虑这
 # 个父类方法，而只关注你在子类中定义的相应方法。
@@ -42,7 +51,9 @@ class ElectricCar(Car):
         print("aaaaaaaaaaaaaaaaaa重写")
 
 
-my_tesla = ElectricCar('tesla', 'model s', 2016)
-print(my_tesla.get_descriptive_name())
-my_tesla.describe_battery()
-my_tesla.read_odometer()
+# my_tesla = ElectricCar('tesla', 'model s', 2016)
+# print(my_tesla.get_descriptive_name())
+# my_tesla.describe_battery()
+# my_tesla.read_odometer()
+# my_tesla.battery.descri_battery()
+
